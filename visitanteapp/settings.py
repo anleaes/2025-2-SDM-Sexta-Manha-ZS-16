@@ -45,9 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'visitors.apps.VisitorsConfig'
-    'vehicles.apps.VehiclesConfig'
-
+    'visitors.apps.VisitorsConfig',
+    'vehicles.apps.VehiclesConfig',
 ]
 
 MIDDLEWARE = [

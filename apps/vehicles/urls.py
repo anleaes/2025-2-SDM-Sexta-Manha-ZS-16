@@ -5,7 +5,7 @@ from .views import VehicleViewSet
 app_name = 'vehicles'
 
 router = routers.DefaultRouter()
-router.register('', views.ProductViewSet, basename='veículos')
+router.register('', VehicleViewSet, basename='veículos')
 
 urlpatterns = [
     path('', include(router.urls) )
