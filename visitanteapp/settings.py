@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'visitors.apps.VisitorsConfig',
     'vehicles.apps.VehiclesConfig',
+    'visitschedules.apps.VisitschedulesConfig',
 ]
 
 MIDDLEWARE = [
