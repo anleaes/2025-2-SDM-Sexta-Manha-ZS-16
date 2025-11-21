@@ -1,0 +1,73 @@
+@startuml
+
+class User {
+  -first_name: String
+  -last_name: String
+  -email: String
+  -password: String
+}
+
+class Visitor {
+  -first_name: String
+  -last_name: String
+  -id_document: String
+  -phone: String
+  -email: String
+}
+
+class Vehicle {
+  -license_plate: String
+  -model: String
+  -color: String
+  -visitor: Visitor
+}
+
+class Visit {
+  -schedule: VisitSchedule
+  -entry_datetime: Datetime
+  -exit_datetime: Datetime
+  -status: String 
+}
+
+class Review{
+  -rating: Integer
+  -comment: String
+  -review_datetime: Datetime
+  -author: Client
+  -visit: Visit
+}
+
+class Building {
+  -name: String
+  -address: String
+  -description: String
+  -operational_status: String
+}
+
+class Department {
+  -name: String
+  -location: String
+  -description: String
+  -building: Building
+}
+
+class VisitSchedule {
+  -visitor: Visitor
+  -department: Department
+  -vehicle: Vehicle
+  -manager: User
+  -scheduled_datetime: Datetime
+  -status: String
+}
+
+User "1" *--> "N" VisitSchedule
+Vehicle "1" *--> "N" VisitSchedule 
+Building "1" *--> "N" Department 
+Visitor "1" *--> "N" VisitSchedule
+Visitor "1" *--> "N" Review
+Visit "1" *-up-> "N" Review 
+Department "1" *--> "N" VisitSchedule 
+VisitSchedule "N" *--> "N" Visit
+
+
+@enduml
