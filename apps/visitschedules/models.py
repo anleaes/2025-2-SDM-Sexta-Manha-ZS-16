@@ -34,6 +34,9 @@ class VisitSchedule(models.Model):
     scheduled_datetime = models.DateTimeField('Data/Hora Agendada')
     status = models.CharField('Status', max_length=50)
 
+    created_on = models.DateTimeField('Criado em', auto_now_add=True)
+    updated_on = models.DateTimeField('Atualizado em', auto_now=True)
+
     class Meta:
         verbose_name = 'Agendamento de Visita'
         verbose_name_plural = 'Agendamentos de Visita'
