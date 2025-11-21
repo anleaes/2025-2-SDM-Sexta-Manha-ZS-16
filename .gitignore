@@ -3,3 +3,5 @@
 /apps/visitors/migrations/*
 /apps/vehicles/__pycache__/*
 /apps/vehicles/migrations/*
+/apps/visitschedules/__pycache__/*
+/apps/visitschedules/migrations/*
