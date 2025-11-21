@@ -1,3 +1,5 @@
 /visitanteapp/__pycache__/*
 /apps/visitors/__pycache__/*
 /apps/visitors/migrations/*
+/apps/vehicles/__pycache__/*
+/apps/vehicles/migrations/*
