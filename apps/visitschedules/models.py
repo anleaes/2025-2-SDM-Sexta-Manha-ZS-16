@@ -1,7 +1,7 @@
 from django.db import models
 from visitors.models import Visitor
 from vehicles.models import Vehicle
-from departments.models import Department  # será criado futuramente
+#from departments.models import Department  será criado futuramente
 from django.contrib.auth import get_user_model
 
 # Create your models here.
@@ -13,11 +13,11 @@ class VisitSchedule(models.Model):
         on_delete=models.CASCADE,
         related_name='visit_schedules'
     )
-    department = models.ForeignKey(
-        Department,
-        on_delete=models.CASCADE,
-        related_name='visit_schedules'
-    )
+    # department = models.ForeignKey(
+    #     Department,
+    #     on_delete=models.CASCADE,
+    #     related_name='visit_schedules'
+    # )
     vehicle = models.ForeignKey(
         Vehicle,
         on_delete=models.SET_NULL,
