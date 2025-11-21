@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('visitantes/', include('visitors.urls', namespace='visitors')),
     path('veículos/', include('vehicles.urls', namespace='vehicles')),
+    path('agendamento_de_visitas/', include('visitschedules.urls', namespace='visitschedules')),
+
 
 ]
