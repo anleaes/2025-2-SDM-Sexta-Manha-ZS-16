@@ -6,3 +6,11 @@ class Building(models.Model):
     address = models.CharField('Endereço', max_length=255)
     description = models.TextField('Descrição', blank=True, null=True)
     operational_status = models.CharField('Status Operacional', max_length=50)
+
+    class Meta:
+        verbose_name = 'Prédio'
+        verbose_name_plural = 'Prédios'
+        ordering = ['name']
+
+    def __str__(self):
+        return self.name
