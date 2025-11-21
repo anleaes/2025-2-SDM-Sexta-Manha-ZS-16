@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Category
-from .serializer import CategorySerializer
+from .models import Visitor
+from .serializer import VisitorSerializer
 
 # Create your views here.
 class VisitorViewSet(viewsets.ModelViewSet):
