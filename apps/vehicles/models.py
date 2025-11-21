@@ -4,6 +4,7 @@ from django.db import models
 class Vehicle(models.Model):
     license_plate = models.CharField('Placa', max_length=15, unique=True)
     model = models.CharField('Modelo', max_length=100)
+    brand = models.CharField('Marca', max_length=50)
     color = models.CharField('Cor', max_length=50)
 
     class Meta:
