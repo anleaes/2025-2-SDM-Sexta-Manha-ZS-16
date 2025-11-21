@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'visitors.apps.VisitorsConfig',
     'vehicles.apps.VehiclesConfig',
     'visitschedules.apps.VisitschedulesConfig',
+    'buildings.apps.BuildingsConfig',
 ]
 
 MIDDLEWARE = [
